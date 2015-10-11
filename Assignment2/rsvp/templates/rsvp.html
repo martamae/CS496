@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>RSVP</title>
+</head>
+<body>
+    <form action="/rsvp" method="post">
+        <legend>RSVP</legend>
+        <input type="hidden" name="action" value="add_rsvp">
+        <fieldset>
+            <legend>First and Last Name: </legend>
+            <input type="text" name="rsvp-name">
+        </fieldset>
+        <fieldset>
+            <legend>Number of people in your party: </legend>
+            <input type="number" name="rsvp-number">
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="RSVP">
+        </fieldset>
+    </form>
+    {% if RSVPs|length > 0 %}
+    <section>
+        <h2>Edit RSVP</h2>
+            {% for x in RSVPs %}
+            <a href='/edit?key={{ rsvp.key }}&type=rsvp'>{{ rsvp.name }}</a>
+            {% endfor %}
+    </section>
+    {% endif %}
+    {% if message %}
+    <section>
+        <h3>Result</h3>
+        <p>{{ message }}</p>
+    </section>
+    {% endif %}
+</body>
+</html>
