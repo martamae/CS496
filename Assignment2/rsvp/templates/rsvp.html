@@ -23,7 +23,7 @@
     {% if RSVPs|length > 0 %}
     <section>
         <h2>Edit RSVP</h2>
-            {% for x in RSVPs %}
+            {% for rsvp in RSVPs %}
             <a href='/edit?key={{ rsvp.key }}&type=rsvp'>{{ rsvp.name }}</a>
             {% endfor %}
     </section>
