@@ -12,4 +12,5 @@ class EditRSVP(base_page.BaseHandler):
 		rsvp.number = int(self.request.get('rsvp-number'))
 		rsvp.foods = self.request.get_all('rsvp-food')
 		rsvp.email = self.request.get('rsvp-email')
+		rsvp.put()
 		self.redirect('/edit?key=' + rsvp_key.urlsafe() + '&type=rsvp')
