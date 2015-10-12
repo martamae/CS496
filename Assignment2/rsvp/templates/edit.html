@@ -28,9 +28,9 @@
         </fieldset>
         <fieldset>
             <legend>Food Choices</legend>
-            {% for x in foods %}
-             <input type="checkbox" name="rsvp-food" value="{{ x }}" checked="checked">{{ x }}
-             {% endfor %}
+                {% for y in "Chicken", "Veggies", "Water", "Wine", "Chips", "Fruit" %}
+                     <input type="checkbox" name="rsvp-food" value="{{ y }}">{{ y }}                        
+                {% endfor %}     
         </fieldset>
         <fieldset>
             <legend>Email Address</legend>
