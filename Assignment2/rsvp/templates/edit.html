@@ -10,15 +10,15 @@
         <input type="hidden" name="key" value="{{ rsvp.key.urlsafe() }}">
         <fieldset>
             <legend>First and Last Name: </legend>
-            <input type="text" name="rsvp-name" value="{{ rsvp_name }}">
+            <input type="text" name="rsvp-name" value="{{ rsvp_name }}" required>
         </fieldset>
         <fieldset>
             <legend>RSVP</legend>
             {% if rsvp_answer %}
-                <input type="radio" name="rsvp-answer" value="True" checked="checked">Attending
+                <input type="radio" name="rsvp-answer" value="True" checked="checked" required>Attending
                 <input type="radio" name="rsvp-answer" value="">Not Attending
             {% else %}
-                <input type="radio" name="rsvp-answer" value="True">Attending
+                <input type="radio" name="rsvp-answer" value="True" required>Attending
                 <input type="radio" name="rsvp-answer" value="" checked="checked">Not Attending
             {% endif %}
         </fieldset>
