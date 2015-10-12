@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <title>Edit RSVP</title>
+</head>
+<body>
+    <form method="post" action="/editRSVP">
+        <legend>Edit RSVP</legend>
+        <input type="hidden" name="key" value="{{ rsvp.key.urlsafe() }}">
+        <fieldset>
+            <legend>First and Last Name: </legend>
+            <input type="text" name="rsvp-name" value="{{ rsvp_name }}">
+        </fieldset>
+        <fieldset>
+            <legend>RSVP</legend>
+            {% if rsvp_answer %}
+                <input type="radio" name="rsvp-answer" value="True" checked="checked">Attending
+                <input type="radio" name="rsvp-answer" value="">Not Attending
+            {% else %}
+                <input type="radio" name="rsvp-answer" value="True">Attending
+                <input type="radio" name="rsvp-answer" value="" checked="checked">Not Attending
+            {% endif %}
+        </fieldset>
+        <fieldset>
+            <legend>Number of people in your party: </legend>
+            <input type="number" min="0" name="rsvp-number" value="{{ rsvp_number }}" required>
+        </fieldset>
+        <fieldset>
+            <legend>Food Choices</legend>
+            {% for x in foods %}
+             <input type="checkbox" name="rsvp-food" value="{{ x }}" checked="checked">{{ x }}
+             {% endfor %}
+        </fieldset>
+        <fieldset>
+            <legend>Email Address</legend>
+            <input type="email" name="rsvp-email" value ="{{ rsvp_email }}">
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="RSVP">
+        </fieldset>
+    </form>
+    {% if message %}
+    <section>
+        <h3>Result</h3>
+        <p>{{ message }}</p>
+    </section>
+    {% endif %}
+</body>
+</html>

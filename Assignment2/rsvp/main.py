@@ -19,5 +19,8 @@ import webapp2
 config = {'default-group':'base-data'}
 
 application = webapp2.WSGIApplication([
+	('/view', 'viewRSVP.ViewRSVP'),
+	('/edit', 'edit.Edit'),
+	('/editRSVP', 'editRSVP.EditRSVP'),
 	('/rsvp', 'rsvp.RSVP'),
 ], debug=True, config=config)

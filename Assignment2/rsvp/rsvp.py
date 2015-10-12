@@ -23,7 +23,10 @@ class RSVP(base_page.BaseHandler):
 			k = ndb.Key(db_defs.RSVP, self.app.config.get('default-group'))
 			rsvp = db_defs.RSVP(parent=k)
 			rsvp.name = self.request.get('rsvp-name')
+			rsvp.answer = bool(self.request.get('rsvp-answer'))
 			rsvp.number = int(self.request.get('rsvp-number'))
+			rsvp.foods = self.request.get_all('rsvp-food')
+			rsvp.email = self.request.get('rsvp-email')
 			rsvp.put() #save RSVP
 			self.template_values['message'] = rsvp.name + ' has RSVPed!'
 		else:

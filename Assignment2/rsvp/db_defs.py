@@ -6,4 +6,10 @@ class Message(ndb.Model):
 
 class RSVP(ndb.Model):
 	name = ndb.StringProperty(required=True)
+	answer = ndb.BooleanProperty(required=True)
 	number = ndb.IntegerProperty(required=True)
+	foods = ndb.StringProperty(repeated=True)
+	email = ndb.StringProperty(required=False)
+
+class Foods(ndb.Model):
+	name = ndb.StringProperty(required=True)

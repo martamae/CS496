@@ -10,16 +10,42 @@
         <input type="hidden" name="action" value="add_rsvp">
         <fieldset>
             <legend>First and Last Name: </legend>
-            <input type="text" name="rsvp-name">
+            <input type="text" name="rsvp-name" required>
+        </fieldset>
+        <fieldset>
+            <legend>RSVP</legend>
+            <input type="radio" name="rsvp-answer" value="True">Attending
+            <input type="radio" name="rsvp-answer" value="">Not Attending
         </fieldset>
         <fieldset>
             <legend>Number of people in your party: </legend>
-            <input type="number" name="rsvp-number">
+            <input type="number" min="0" name="rsvp-number" required>
+        </fieldset>
+        <fieldset>
+            <legend>Food Choices</legend>
+            <input type="checkbox" name="rsvp-food" value="Chicken">Chicken
+            <input type="checkbox" name="rsvp-food" value="Vegetables">Vegetables
+            <input type="checkbox" name="rsvp-food" value="Water">Water
+            <input type="checkbox" name="rsvp-food" value="Wine">Wine
+            <input type="checkbox" name="rsvp-food" value="Fruit">Fruit
+            <input type="checkbox" name="rsvp-food" value="Chips">Chips
+        </fieldset>
+        <fieldset>
+            <legend>Email Address</legend>
+            <input type="email" name="rsvp-email">
         </fieldset>
         <fieldset>
             <input type="submit" value="RSVP">
         </fieldset>
     </form>
+    {% if RSVPs|length > 0 %}
+    <section>
+        <h2>View RSVP</h2>
+            {% for rsvp in RSVPs %}
+            <a href='/view?key={{ rsvp.key }}&type=view'>{{ rsvp.name }}</a>
+            {% endfor %}
+    </section>
+    {% endif %}
     {% if RSVPs|length > 0 %}
     <section>
         <h2>Edit RSVP</h2>
