@@ -24,12 +24,22 @@
         </fieldset>
         <fieldset>
             <legend>Number of people in your party: </legend>
-            <input type="number" min="0" name="rsvp-number" value="{{ rsvp_number }}" required>
+            <input type="number" min="1" name="rsvp-number" value="{{ rsvp_number }}" required>
+        </fieldset>
+        <fieldset>
+            <legend>My party will attend:</legend>
+                {% for e in events %} 
+                     <input type="checkbox" name="rsvp-events" {% if e.checked %} checked="checked" {% endif %} value="{{ e.key }}">{{ e.name }}                    
+                {% endfor %}     
         </fieldset>
         <fieldset>
             <legend>Food Choices</legend>
-                {% for y in "Chicken", "Veggies", "Water", "Wine", "Chips", "Fruit" %}
-                     <input type="checkbox" name="rsvp-food" value="{{ y }}">{{ y }}                        
+                {% for y in "Chicken", "Steak", "Vegetarian" %}
+                     {% if y == rsvp_food %}
+                     <input type="radio" name="rsvp-food" checked="checked" value="{{ y }}">{{ y }}
+                     {% else %}
+                     <input type="radio" name="rsvp-food" value="{{ y }}">{{ y }}   
+                     {% endif %}                     
                 {% endfor %}     
         </fieldset>
         <fieldset>
@@ -37,7 +47,7 @@
             <input type="email" name="rsvp-email" value ="{{ rsvp_email }}">
         </fieldset>
         <fieldset>
-            <input type="submit" value="RSVP">
+            <input type="submit" value="Save RSVP">
         </fieldset>
     </form>
     {% if message %}

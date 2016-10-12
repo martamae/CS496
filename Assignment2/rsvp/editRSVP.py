@@ -9,8 +9,9 @@ class EditRSVP(base_page.BaseHandler):
 		rsvp = rsvp_key.get()
 		rsvp.name = self.request.get('rsvp-name')
 		rsvp.answer = bool(self.request.get('rsvp-answer'))
+		rsvp.events = [ndb.Key(urlsafe=x) for x in self.request.get_all('rsvp-events')]
+		rsvp.food = self.request.get('rsvp-food')
 		rsvp.number = int(self.request.get('rsvp-number'))
-		rsvp.foods = self.request.get_all('rsvp-food')
 		rsvp.email = self.request.get('rsvp-email')
 		rsvp.put()
-		self.redirect('/edit?key=' + rsvp_key.urlsafe() + '&type=rsvp')
+		self.redirect('/rsvp')

@@ -19,16 +19,19 @@
         </fieldset>
         <fieldset>
             <legend>Number of people in your party: </legend>
-            <input type="number" min="0" name="rsvp-number" required>
+            <input type="number" min="1" name="rsvp-number" required>
+        </fieldset>
+        <fieldset>
+            <legend>My party will attend:</legend>
+            {% for e in events %}
+            <input type="checkbox" name="rsvp-events" value="{{e.key}}"> {{e.name }}
+            {% endfor %}
         </fieldset>
         <fieldset>
             <legend>Food Choices</legend>
-            <input type="checkbox" name="rsvp-food" value="Chicken">Chicken
-            <input type="checkbox" name="rsvp-food" value="Vegetables">Vegetables
-            <input type="checkbox" name="rsvp-food" value="Water">Water
-            <input type="checkbox" name="rsvp-food" value="Wine">Wine
-            <input type="checkbox" name="rsvp-food" value="Fruit">Fruit
-            <input type="checkbox" name="rsvp-food" value="Chips">Chips
+            <input type="radio" name="rsvp-food" value="Chicken">Chicken
+            <input type="radio" name="rsvp-food" value="Vegetables">Steak
+            <input type="radio" name="rsvp-food" value="Water">Vegetarian
         </fieldset>
         <fieldset>
             <legend>Email Address</legend>

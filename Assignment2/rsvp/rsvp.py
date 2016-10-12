@@ -9,9 +9,11 @@ class RSVP(base_page.BaseHandler):
 		self.initialize(request, response)
 		self.template_values = {} #start with empty dictionary
 
+
 	def render(self, page):
 		#returns list of RSVPs
-		self.template_values['RSVPs'] = [{'name':x.name,'key':x.key.urlsafe()} for x in db_defs.RSVP.query().fetch()]
+		self.template_values['events']=[{'name':x.name, 'key':x.key.urlsafe()} for x in db_defs.Event.query().fetch()]
+		self.template_values['RSVPs'] = [{'name':x.name,'key':x.key.urlsafe()} for x in db_defs.RSVP.query(ancestor=ndb.Key(db_defs.RSVP, self.app.config.get('default-group'))).fetch()]
 		base_page.BaseHandler.render(self, page, self.template_values)
 
 	def get(self):
@@ -25,7 +27,8 @@ class RSVP(base_page.BaseHandler):
 			rsvp.name = self.request.get('rsvp-name')
 			rsvp.answer = bool(self.request.get('rsvp-answer'))
 			rsvp.number = int(self.request.get('rsvp-number'))
-			rsvp.foods = self.request.get_all('rsvp-food')
+			rsvp.events = [ndb.Key(urlsafe=x) for x in self.request.get_all('rsvp-events')]
+			rsvp.food = self.request.get('rsvp-food')
 			rsvp.email = self.request.get('rsvp-email')
 			rsvp.put() #save RSVP
 			self.template_values['message'] = rsvp.name + ' has RSVPed!'

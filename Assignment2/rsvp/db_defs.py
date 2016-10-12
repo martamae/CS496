@@ -8,8 +8,10 @@ class RSVP(ndb.Model):
 	name = ndb.StringProperty(required=True)
 	answer = ndb.BooleanProperty(required=True)
 	number = ndb.IntegerProperty(required=True)
-	foods = ndb.StringProperty(repeated=True)
+	events = ndb.KeyProperty(repeated=True)
+	food = ndb.StringProperty(required=False)
 	email = ndb.StringProperty(required=False)
 
-class Foods(ndb.Model):
+class Event(ndb.Model):
 	name = ndb.StringProperty(required=True)
+	checked = ndb.BooleanProperty(required=False)

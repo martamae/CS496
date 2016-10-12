@@ -18,7 +18,17 @@ class Edit(base_page.BaseHandler):
 			self.template_values['rsvp_answer'] = rsvp.answer
 			self.template_values['rsvp_number'] = rsvp.number
 			self.template_values['rsvp_email'] = rsvp.email
-			self.template_values['foods'] = rsvp.foods
+			self.template_values['rsvp_food'] = rsvp.food
+			
+			events = db_defs.Event.query().fetch()
+			
+			event_boxes = []
+			for e in events:
+				if e.key in rsvp.events:
+					event_boxes.append({'name': e.name, 'key': e.key.urlsafe(), 'checked':True})
+				else:
+					event_boxes.append({'name': e.name, 'key': e.key.urlsafe(), 'checked':False})
+			self.template_values['events'] = event_boxes
 		self.render('edit.html', self.template_values)
 		
 

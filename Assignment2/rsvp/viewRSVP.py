@@ -16,18 +16,25 @@ class ViewRSVP(base_page.BaseHandler):
 			self.response.write('Name: ')	
 			self.response.write(rsvp.name)
 			self.response.write('<br>')
+			self.response.write('Number in your party: ')
+			self.response.write(rsvp.number)
+			self.response.write('<br>')
+			self.response.write('<br>')
+
 			if rsvp.answer == True:
-				self.response.write('You are Attending <br>')
-				self.response.write('Number in your party: ')
-				self.response.write(rsvp.number)
+				self.response.write('You are Attending: <br>')
+				
+				events = db_defs.Event.query().fetch()
+			
+				for e in events:
+					if e.key in rsvp.events:
+						self.response.write(e.name)
+						self.response.write('<br>')
 				self.response.write('<br>')
 				self.response.write('Email: ')
 				self.response.write(rsvp.email)
 				self.response.write('<br>')
-				self.response.write('Food Choices: ')
-				self.response.write('<br>')
-				for x in rsvp.foods:
-					self.response.write(x)
-					self.response.write('<br>')
+				self.response.write('Food Choice: ')
+				self.response.write (rsvp.food)
 			else:
 				self.response.write('You are not attending <br>')	
