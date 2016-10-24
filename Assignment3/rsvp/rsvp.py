@@ -22,6 +22,10 @@ class RSVP(webapp2.RequestHandler):
 				self.response.status = 404
 				self.response.status_message = "Invalid request: must specify guest's answer"
 				return
+		else:
+			self.response.status = 404
+			self.response.status_message = "Invalid request: must specify guest's answer"
+			return
 		new_guest.answer = answer
 		n = self.request.get('number', default_value=None)
 		if n:
