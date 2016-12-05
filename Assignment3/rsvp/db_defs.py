@@ -15,8 +15,14 @@ class Guest(Model):
 
 class Event(Model):
 	name = ndb.StringProperty(required=True)
+	un = ndb.StringProperty(required=True)
 	host = ndb.StringProperty(required=True)
 	hostEmail = ndb.StringProperty(required=False)
+	address1 = ndb.StringProperty(required=True)
+	address2 = ndb.StringProperty(required=False)
+	city = ndb.StringProperty(required=True)
+	state = ndb.StringProperty(required=True)
+	zip = ndb.StringProperty(required=True)
 	foods = ndb.StringProperty(repeated=True)
 	guests = ndb.KeyProperty(repeated=True)
 
