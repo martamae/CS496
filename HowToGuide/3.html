@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>MapKit How To Guide</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/jumbotron.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">MapKit How To Guide</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Getting Route from the Current Location</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="mid">
+                <h2>MKMapItems</h2>
+                <p>To navigate to a destination, you can ask the user to input an address, but for simplicity we will create a variable and hard code an address to use for the destination</p>
+                <img src="img/destination.png">
+                <br /><br />
+                <p>Next, create MKMapItem variables inside the ViewController class but outside of the functions</p>
+                <img src="img/mapitems.png" />
+                <br /><br />
+                <p>MKMapItems hold information about a specific point on a map. So, these variables will hold information about the user's current location and the destination</p>
+                <br />
+                <h2>Set MKMapItem Variables</h2>
+                <p>This line will set the currentMapItem variable to hold the information for the current location</p>
+                <img src="img/currmapitem.png" />
+                <br /><br />
+                <p>Setting the destinationMapItem variable is more complicated. You need to use the CLGeocoder class to convert the destination address into coordinates that can be used to locate the destination on the map. You should put the CLGeocoder object inside the if statement that checks if the user granted access to the app to access the current location</p>
+                <img src="img/CLGeocoder.png" />
+                <p>Code Explanation: The CLGeocoder takes the destination address and returns a CLPlacemark object. You can set the placemark variable to the first placemark returned in the placemarks list. This CLPlacemark object has a location property which in turn had a coordinate property. Additionally, the placemarker has an addressDictionary propery. Use these properties to set the coordinates of the destinationMapItem</p>
+                <br />
+                <h2>MKDirectionsRequest</h2>
+                <p>Now that both MKMapItems hold information about the two navigation points, we can now get directions to navigate between the two points</p>
+                <p>Because the CLGeocoder runs asynchronously, the rest of th code to get directions needs to be placed inside the CLGeocoder completion block so that it does not run before the CLGeocoder finishes running.</p>
+                <p>Create an instance of the MKDirectionsRequest class. This instance can then be configured with the source and destination points using the MKMapItems, you can specify the transportation mode, and you can indicate that you do not want to receive alternative routes. Your code should look like the following:</p>
+                <img src="img/directionsrequest.png" />
+                <br /><br />
+                <h2>Calculate Directions</h2>
+                <p>You can now create an instance of the MKDirections class from the request. This object will give you route-based directions from the user's current location to the destination address. The direction object passes the request to the Apple servers and returns the requested directions</p>
+                <p>After the directions are requested you can use the calculate function to calculate the requested route information</p>
+                <img src="img/calculate.png" />
+                <br /><br />
+                <h2>Displaying Directions to the User</h2>
+                <p>The calculate function also runs asynchronously, so the following code to display the directions must be placed inside the calculate return block</p>
+                <img src="img/displayroute.png" />
+                <br /><br />
+                <p>Code Explanation:</p>
+                <p><b>if error != nil</b> - if an error is returned, will print ERROR to the console</p>
+                <p><b>self.Route = response?.routes.first</b> - sets the Route variable to the first route returned from the calculate function. The Route variable must be declare outside of the ViewController to be used here</p>
+                <p><b>self.mapView.add(...)</b> - adds the line to the map for the route</p>
+                <p><b>self.mapView.setVisibleMapRect(...)</b> - bounds the size of the map on loading to fit the directions</p>
+                <br />
+                <p>Before the route can be displayed on the map, the following function needs to be added to the ViewController class to render the polyline</p>
+                <img src="img/render.png" />
+                <br /><br />
+                <p>When you run the app the route will now be displayed on the map</p>
+                <img src="img/mapRoute.png" width="255" height="470">
+                <br /><br /><br />
+                <div class="nav-btns">
+                    <div class="back-btn">
+                        <p><a class="btn btn-default" href="2.html" role="button">&laquo; Add Current Location </a></p>
+                    </div> <!--back-btn-->
+                    <div class="next-btn">
+                        <p><a class="btn btn-default" href="4.html" role="button">Turn-by-Turn Directions &raquo;</a></p>
+                    </div> <!--next-btn-->
+                </div> <!--nav-btns-->
+        </div><!---/mid-->
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
