@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		218A535AC147D657CEA6F09B /* Pods_RSVPUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3055E86818A0BC37610D6DD7 /* Pods_RSVPUITests.framework */; };
+		73C2B05F6461F33F1EE04C9C /* Pods_RSVPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65B9F017BD6B42250945D727 /* Pods_RSVPTests.framework */; };
+		7700A7861DF4F9D5007C6A8C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7700A7851DF4F9D5007C6A8C /* GoogleService-Info.plist */; };
+		7700A7881DF52508007C6A8C /* RSVP Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7700A7871DF52508007C6A8C /* RSVP Controller.swift */; };
+		770E3D651DF3DC7700C114FB /* Sign In Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E3D641DF3DC7700C114FB /* Sign In Button.swift */; };
+		770E3D671DF3E24100C114FB /* Event Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E3D661DF3E24100C114FB /* Event Functions.swift */; };
+		770E3D6A1DF40ED500C114FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 770E3D691DF40ED500C114FB /* GoogleService-Info.plist */; };
+		770E3D6C1DF4184900C114FB /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 770E3D6B1DF4184900C114FB /* GoogleSignIn.bundle */; };
+		770E3D6E1DF48D3800C114FB /* ManageEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770E3D6D1DF48D3800C114FB /* ManageEventViewController.swift */; };
+		772E71CE1DF67A8C00EEBB52 /* View RSVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772E71CD1DF67A8C00EEBB52 /* View RSVP.swift */; };
+		774456D71DF326DA00B8702C /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 774456D61DF326DA00B8702C /* Podfile */; };
 		774B4ED61DD17EC500025719 /* Map View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774B4ED51DD17EC500025719 /* Map View Controller.swift */; };
 		776FCBDD1DD0841B0098A2B3 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 776FCBDC1DD0841B0098A2B3 /* EventView.swift */; };
-		77964A001DCFB16E00BA842C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779649FF1DCFB16E00BA842C /* Constants.swift */; };
 		77964A021DCFCCCF00BA842C /* CreateEventViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77964A011DCFCCCF00BA842C /* CreateEventViewControllerTableViewController.swift */; };
 		77C2B2FE1DCF3C7300939A29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B2FD1DCF3C7300939A29 /* AppDelegate.swift */; };
 		77C2B3001DCF3C7300939A29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B2FF1DCF3C7300939A29 /* ViewController.swift */; };
@@ -18,6 +28,7 @@
 		77C2B3081DCF3C7400939A29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C2B3061DCF3C7400939A29 /* LaunchScreen.storyboard */; };
 		77C2B3131DCF3C7500939A29 /* RSVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B3121DCF3C7500939A29 /* RSVPTests.swift */; };
 		77C2B31E1DCF3C7500939A29 /* RSVPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C2B31D1DCF3C7500939A29 /* RSVPUITests.swift */; };
+		F741D3842B741C46A55E08B9 /* Pods_RSVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F13DD1E591A19E0F3B1B59 /* Pods_RSVP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +49,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		774B4ED51DD17EC500025719 /* Map View Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Map View Controller.swift"; path = "RSVP/Map View Controller.swift"; sourceTree = "<group>"; };
+		017493ACD4399D9286D0C840 /* Pods-RSVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		232999D3BCCFCCA14CF75E9F /* Pods-RSVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests.release.xcconfig"; sourceTree = "<group>"; };
+		275C17AB5D55492B099EEBA1 /* Pods-RSVPUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3055E86818A0BC37610D6DD7 /* Pods_RSVPUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSVPUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4037D9CC709040EC064C0D9C /* Pods-RSVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVP/Pods-RSVP.release.xcconfig"; sourceTree = "<group>"; };
+		4F2EC28D38D01E44E409F321 /* Pods-RSVPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests.release.xcconfig"; sourceTree = "<group>"; };
+		65B9F017BD6B42250945D727 /* Pods_RSVPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSVPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7700A7851DF4F9D5007C6A8C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7700A7871DF52508007C6A8C /* RSVP Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RSVP Controller.swift"; sourceTree = "<group>"; };
+		770E3D641DF3DC7700C114FB /* Sign In Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sign In Button.swift"; sourceTree = "<group>"; };
+		770E3D661DF3E24100C114FB /* Event Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event Functions.swift"; sourceTree = "<group>"; };
+		770E3D681DF3F0E500C114FB /* RSVP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RSVP.entitlements; sourceTree = "<group>"; };
+		770E3D691DF40ED500C114FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		770E3D6B1DF4184900C114FB /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		770E3D6D1DF48D3800C114FB /* ManageEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageEventViewController.swift; sourceTree = "<group>"; };
+		772E71CD1DF67A8C00EEBB52 /* View RSVP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View RSVP.swift"; sourceTree = "<group>"; };
+		774456D61DF326DA00B8702C /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		774456D81DF32A5D00B8702C /* RSVP-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RSVP-Bridging-Header.h"; sourceTree = "<group>"; };
+		774B4ED51DD17EC500025719 /* Map View Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Map View Controller.swift"; sourceTree = "<group>"; };
 		776FCBDC1DD0841B0098A2B3 /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
-		779649FF1DCFB16E00BA842C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = RSVP/Constants.swift; sourceTree = "<group>"; };
 		77964A011DCFCCCF00BA842C /* CreateEventViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		77C2B2FA1DCF3C7300939A29 /* RSVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C2B2FD1DCF3C7300939A29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +83,8 @@
 		77C2B3191DCF3C7500939A29 /* RSVPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSVPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77C2B31D1DCF3C7500939A29 /* RSVPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVPUITests.swift; sourceTree = "<group>"; };
 		77C2B31F1DCF3C7500939A29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0C79DFC1AB4AF81F8DA90A7 /* Pods-RSVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RSVP/Pods-RSVP.debug.xcconfig"; sourceTree = "<group>"; };
+		B4F13DD1E591A19E0F3B1B59 /* Pods_RSVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F741D3842B741C46A55E08B9 /* Pods_RSVP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73C2B05F6461F33F1EE04C9C /* Pods_RSVPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,21 +108,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218A535AC147D657CEA6F09B /* Pods_RSVPUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AEF300E54EFEE8922DC8A6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0C79DFC1AB4AF81F8DA90A7 /* Pods-RSVP.debug.xcconfig */,
+				4037D9CC709040EC064C0D9C /* Pods-RSVP.release.xcconfig */,
+				017493ACD4399D9286D0C840 /* Pods-RSVPTests.debug.xcconfig */,
+				232999D3BCCFCCA14CF75E9F /* Pods-RSVPTests.release.xcconfig */,
+				275C17AB5D55492B099EEBA1 /* Pods-RSVPUITests.debug.xcconfig */,
+				4F2EC28D38D01E44E409F321 /* Pods-RSVPUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		77C2B2F11DCF3C7100939A29 = {
 			isa = PBXGroup;
 			children = (
-				774B4ED51DD17EC500025719 /* Map View Controller.swift */,
-				779649FF1DCFB16E00BA842C /* Constants.swift */,
+				774456D61DF326DA00B8702C /* Podfile */,
 				77C2B2FC1DCF3C7300939A29 /* RSVP */,
 				77C2B3111DCF3C7500939A29 /* RSVPTests */,
 				77C2B31C1DCF3C7500939A29 /* RSVPUITests */,
 				77C2B2FB1DCF3C7300939A29 /* Products */,
+				77F617EF1DF23369001ECCD4 /* Frameworks */,
+				5AEF300E54EFEE8922DC8A6A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,14 +154,25 @@
 		77C2B2FC1DCF3C7300939A29 /* RSVP */ = {
 			isa = PBXGroup;
 			children = (
+				7700A7851DF4F9D5007C6A8C /* GoogleService-Info.plist */,
+				770E3D6D1DF48D3800C114FB /* ManageEventViewController.swift */,
+				770E3D6B1DF4184900C114FB /* GoogleSignIn.bundle */,
+				770E3D691DF40ED500C114FB /* GoogleService-Info.plist */,
+				770E3D681DF3F0E500C114FB /* RSVP.entitlements */,
+				770E3D641DF3DC7700C114FB /* Sign In Button.swift */,
+				774B4ED51DD17EC500025719 /* Map View Controller.swift */,
 				776FCBDC1DD0841B0098A2B3 /* EventView.swift */,
 				77964A011DCFCCCF00BA842C /* CreateEventViewControllerTableViewController.swift */,
 				77C2B2FD1DCF3C7300939A29 /* AppDelegate.swift */,
 				77C2B2FF1DCF3C7300939A29 /* ViewController.swift */,
+				774456D81DF32A5D00B8702C /* RSVP-Bridging-Header.h */,
 				77C2B3011DCF3C7400939A29 /* Main.storyboard */,
 				77C2B3041DCF3C7400939A29 /* Assets.xcassets */,
 				77C2B3061DCF3C7400939A29 /* LaunchScreen.storyboard */,
 				77C2B3091DCF3C7400939A29 /* Info.plist */,
+				770E3D661DF3E24100C114FB /* Event Functions.swift */,
+				7700A7871DF52508007C6A8C /* RSVP Controller.swift */,
+				772E71CD1DF67A8C00EEBB52 /* View RSVP.swift */,
 			);
 			path = RSVP;
 			sourceTree = "<group>";
@@ -137,6 +195,16 @@
 			path = RSVPUITests;
 			sourceTree = "<group>";
 		};
+		77F617EF1DF23369001ECCD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4F13DD1E591A19E0F3B1B59 /* Pods_RSVP.framework */,
+				65B9F017BD6B42250945D727 /* Pods_RSVPTests.framework */,
+				3055E86818A0BC37610D6DD7 /* Pods_RSVPUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77C2B3221DCF3C7500939A29 /* Build configuration list for PBXNativeTarget "RSVP" */;
 			buildPhases = (
+				6ADD226FCB2E647F1CD88AAA /* [CP] Check Pods Manifest.lock */,
 				77C2B2F61DCF3C7200939A29 /* Sources */,
 				77C2B2F71DCF3C7200939A29 /* Frameworks */,
 				77C2B2F81DCF3C7200939A29 /* Resources */,
+				6AD8922D3554A7C028CBED0F /* [CP] Embed Pods Frameworks */,
+				763E47AAC08044A186CB750D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,9 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77C2B3251DCF3C7500939A29 /* Build configuration list for PBXNativeTarget "RSVPTests" */;
 			buildPhases = (
+				074DDA9FB276A4D5AD30D60D /* [CP] Check Pods Manifest.lock */,
 				77C2B30A1DCF3C7500939A29 /* Sources */,
 				77C2B30B1DCF3C7500939A29 /* Frameworks */,
 				77C2B30C1DCF3C7500939A29 /* Resources */,
+				B9C8CBD9079F49DB78C109A5 /* [CP] Embed Pods Frameworks */,
+				A987DF2F8D2938C5630BC887 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,9 +253,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77C2B3281DCF3C7500939A29 /* Build configuration list for PBXNativeTarget "RSVPUITests" */;
 			buildPhases = (
+				D3CD97F5CD349700B015C83E /* [CP] Check Pods Manifest.lock */,
 				77C2B3151DCF3C7500939A29 /* Sources */,
 				77C2B3161DCF3C7500939A29 /* Frameworks */,
 				77C2B3171DCF3C7500939A29 /* Resources */,
+				26378A7C6AA3255623DFA779 /* [CP] Embed Pods Frameworks */,
+				A2D133B8520C94B8D68FF8CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,11 +283,21 @@
 					77C2B2F91DCF3C7200939A29 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = GN2S86T98A;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					77C2B30D1DCF3C7500939A29 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = GN2S86T98A;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 77C2B2F91DCF3C7200939A29;
 					};
@@ -247,9 +334,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				774456D71DF326DA00B8702C /* Podfile in Resources */,
 				77C2B3081DCF3C7400939A29 /* LaunchScreen.storyboard in Resources */,
 				77C2B3051DCF3C7400939A29 /* Assets.xcassets in Resources */,
 				77C2B3031DCF3C7400939A29 /* Main.storyboard in Resources */,
+				770E3D6C1DF4184900C114FB /* GoogleSignIn.bundle in Resources */,
+				770E3D6A1DF40ED500C114FB /* GoogleService-Info.plist in Resources */,
+				7700A7861DF4F9D5007C6A8C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,17 +360,159 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		074DDA9FB276A4D5AD30D60D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		26378A7C6AA3255623DFA779 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AD8922D3554A7C028CBED0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVP/Pods-RSVP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ADD226FCB2E647F1CD88AAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		763E47AAC08044A186CB750D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVP/Pods-RSVP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2D133B8520C94B8D68FF8CD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVPUITests/Pods-RSVPUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A987DF2F8D2938C5630BC887 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9C8CBD9079F49DB78C109A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RSVPTests/Pods-RSVPTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3CD97F5CD349700B015C83E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		77C2B2F61DCF3C7200939A29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7700A7881DF52508007C6A8C /* RSVP Controller.swift in Sources */,
 				77C2B3001DCF3C7300939A29 /* ViewController.swift in Sources */,
 				77964A021DCFCCCF00BA842C /* CreateEventViewControllerTableViewController.swift in Sources */,
 				77C2B2FE1DCF3C7300939A29 /* AppDelegate.swift in Sources */,
-				77964A001DCFB16E00BA842C /* Constants.swift in Sources */,
+				772E71CE1DF67A8C00EEBB52 /* View RSVP.swift in Sources */,
 				776FCBDD1DD0841B0098A2B3 /* EventView.swift in Sources */,
+				770E3D6E1DF48D3800C114FB /* ManageEventViewController.swift in Sources */,
+				770E3D671DF3E24100C114FB /* Event Functions.swift in Sources */,
 				774B4ED61DD17EC500025719 /* Map View Controller.swift in Sources */,
+				770E3D651DF3DC7700C114FB /* Sign In Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +570,7 @@
 		77C2B3201DCF3C7500939A29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -429,43 +663,68 @@
 		};
 		77C2B3231DCF3C7500939A29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0C79DFC1AB4AF81F8DA90A7 /* Pods-RSVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RSVP/RSVP.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = GN2S86T98A;
+				ENABLE_NS_ASSERTIONS = YES;
 				INFOPLIST_FILE = RSVP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "Marta-Wegner.RSVP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RSVP/RSVP-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		77C2B3241DCF3C7500939A29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4037D9CC709040EC064C0D9C /* Pods-RSVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = RSVP/RSVP.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEVELOPMENT_TEAM = GN2S86T98A;
+				ENABLE_NS_ASSERTIONS = YES;
 				INFOPLIST_FILE = RSVP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "Marta-Wegner.RSVP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RSVP/RSVP-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		77C2B3261DCF3C7500939A29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 017493ACD4399D9286D0C840 /* Pods-RSVPTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = GN2S86T98A;
 				INFOPLIST_FILE = RSVPTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Marta-Wegner.RSVPTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSVPTests/RSVPTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSVP.app/RSVP";
 			};
@@ -473,15 +732,18 @@
 		};
 		77C2B3271DCF3C7500939A29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 232999D3BCCFCCA14CF75E9F /* Pods-RSVPTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = GN2S86T98A;
 				INFOPLIST_FILE = RSVPTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Marta-Wegner.RSVPTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RSVPTests/RSVPTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSVP.app/RSVP";
 			};
@@ -489,8 +751,9 @@
 		};
 		77C2B3291DCF3C7500939A29 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 275C17AB5D55492B099EEBA1 /* Pods-RSVPUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = GN2S86T98A;
 				INFOPLIST_FILE = RSVPUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -504,8 +767,9 @@
 		};
 		77C2B32A1DCF3C7500939A29 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F2EC28D38D01E44E409F321 /* Pods-RSVPUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				DEVELOPMENT_TEAM = GN2S86T98A;
 				INFOPLIST_FILE = RSVPUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;

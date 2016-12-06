@@ -9,6 +9,8 @@
 import UIKit
 
 class CreateEventViewControllerTableViewController: UITableViewController {
+    var fullName: String!
+    var email: String!
     
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var host: UITextField!
@@ -34,6 +36,8 @@ class CreateEventViewControllerTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        host.text = fullName
+        hostEmail.text = email
     }
 
     override func didReceiveMemoryWarning() {
@@ -76,13 +80,12 @@ class CreateEventViewControllerTableViewController: UITableViewController {
                         
                         request.httpMethod = "POST"
                     
-                        let postString:String = "name=\(name.text!)&host=\(host.text!)&hostEmail=\(hostEmail.text!)&address1=\(address1.text!)&address2=\(address2.text!)&city=\(city.text!)&state=\(state.text!)&zip=\(zip.text!)&foods[]=\(food1.text!)&foods[]=\(food2.text!)&foods[]=\(food3.text!)"
+                        let postString:String = "name=\(name.text!)&un=\(email!)&host=\(host.text!)&hostEmail=\(hostEmail.text!)&address1=\(address1.text!)&address2=\(address2.text!)&city=\(city.text!)&state=\(state.text!)&zip=\(zip.text!)&foods[]=\(food1.text!)&foods[]=\(food2.text!)&foods[]=\(food3.text!)"
                         
                         request.httpBody = postString.data(using: String.Encoding.utf8)
                         request.addValue("application/json", forHTTPHeaderField: "Accept")
                         
                         URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
-                            print ("task completed")
                             if error != nil {
                                 DispatchQueue.main.async {
                                     self.message.text = ("error=\(error)")
@@ -118,6 +121,10 @@ class CreateEventViewControllerTableViewController: UITableViewController {
         
     }
 
+    @IBAction func logout(_ sender: Any) {
+        GIDSignIn.sharedInstance().signOut()
+        performSegue(withIdentifier: "logout", sender: self)
+    }
     
     
     /*

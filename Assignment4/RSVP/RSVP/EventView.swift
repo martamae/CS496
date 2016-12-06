@@ -26,15 +26,17 @@ class EventView: UITableViewController {
     
     @IBOutlet weak var message: UILabel!
     
+    var id: String!
+    
     @IBAction func SubmitID(_ sender: Any) {
         if(EventID.text?.isEmpty ?? true) {
             self.message.text="ERROR: must enter an Event ID!"
         }
         else {
             self.message.text=""
-            let id = EventID.text!
+            id = (EventID.text)!
             
-            let urlString = "https://rsvp-147403.appspot.com/event/\(id)"
+            let urlString = "https://rsvp-147403.appspot.com/event/\(id!)"
             
             let url = URL(string: urlString)!
             
@@ -102,6 +104,15 @@ class EventView: UITableViewController {
         }
     }
     
+    @IBAction func RSVPfor(_ sender: UIButton) {
+        if (name.text?.isEmpty ?? true){
+            self.message.text = "ERROR: Must enter Event ID"
+        }
+        else {
+            self.performSegue(withIdentifier: "RSVPfor", sender: self)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "directionsTo") {
             let MapVC = segue.destination as! Map_View_Controller
@@ -111,6 +122,13 @@ class EventView: UITableViewController {
             let fullAddress = address1.text! + " " + address2.text! + " " + city.text! + " " + state.text! + " " + zip.text!
             
             MapVC.address = fullAddress
+        }
+        
+        if (segue.identifier == "RSVPfor") {
+            let rsvpVC = segue.destination as! RSVP_Controller
+            
+            rsvpVC.id = id
+            rsvpVC.event = name.text!
         }
     }
     
